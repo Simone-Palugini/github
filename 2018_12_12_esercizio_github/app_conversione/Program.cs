@@ -10,7 +10,10 @@ namespace app_conversione
     {
         static void Main(string[] args)
         {
-            string risultato = ""; int num = 255;
+            string risultato = ""; int num = 0;
+
+            Console.WriteLine("inserisci un numero da convertire");
+            num = Convert.ToInt32(Console.ReadLine());
 
             while (num > 1)
             {
@@ -20,6 +23,9 @@ namespace app_conversione
             }
             risultato = Convert.ToString(num) + risultato;
             Console.WriteLine($"il numero binario è {risultato}");
+
+
+            Console.ReadLine();
         }
     }
 }
