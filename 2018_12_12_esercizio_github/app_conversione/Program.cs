@@ -10,19 +10,17 @@ namespace app_conversione
     {
         static void Main(string[] args)
         {
-            string risultato = ""; int num = 0;
+            string risultato = ""; int num = 0, Vbase=0;
 
             Console.WriteLine("inserisci un numero da convertire");
             num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("inserisci la base in cui convertire il numero");
+            Vbase = Convert.ToInt32(Console.ReadLine());
 
-            while (num > 1)
-            {
-                int resto = num % 2;
-                risultato = Convert.ToString(resto) + risultato;
-                num = num / 2;
-            }
-            risultato = Convert.ToString(num) + risultato;
-            Console.WriteLine($"il numero binario è {risultato}");
+            //conversione
+            string convertitore = Convert.ToString(num, Vbase);          
+            risultato = Convert.ToString(num, Vbase) + risultato;
+            Console.WriteLine($"il numero convertito è {risultato}");
 
 
             Console.ReadLine();
